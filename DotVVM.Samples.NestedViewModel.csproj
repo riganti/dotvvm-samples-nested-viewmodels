@@ -4,31 +4,17 @@
         <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     </PropertyGroup>
     <ItemGroup>
-        <!--Include Views-->
-        <Content Include="**/*.dothtml" Exclude="obj/**/*.*;bin/**/*.*">
-            <CopyToPublishDirectory>Always</CopyToPublishDirectory>
-        </Content>
-        <!--Include MasterPage Views-->
-        <Content Include="**/*.dotmaster" Exclude="obj/**/*.*;bin/**/*.*">
-            <CopyToPublishDirectory>Always</CopyToPublishDirectory>
-        </Content>
-        <!--Include Custom Control Views-->
-        <Content Include="**/*.dotcontrol" Exclude="obj/**/*.*;bin/**/*.*">
-            <CopyToPublishDirectory>Always</CopyToPublishDirectory>
-        </Content>
+      <Content Include="**/*.dothtml;**/*.dotmaster;**/*.dotcontrol" Exclude="obj/**/*.*;bin/**/*.*" CopyToPublishDirectory="Always" />
     </ItemGroup>
     <ItemGroup>
         <None Remove="dotvvm_serialized_config.json.tmp" />
-        <None Remove="Views\CRUD\Create.dothtml" />
-        <None Remove="Views\CRUD\Detail.dothtml" />
-        <None Remove="Views\CRUD\Edit.dothtml" />
-        <None Remove="Views\MasterPage.dotmaster" />
-        <None Remove="Views\TaskList.dothtml" />
     </ItemGroup>
     <ItemGroup>
         
+        <PackageReference Include="Bogus" Version="24.3.1" />
         <PackageReference Include="Microsoft.AspNetCore" Version="2.0.3" />
         <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.0.3" />
+        <PackageReference Include="Scrutor" Version="3.0.1" />
         <PackageReference Include="DotVVM.AspNetCore" Version="2.0.3" />
         <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.0.0" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.0" />
@@ -40,8 +26,16 @@
         <DotNetCliToolReference Include="DotVVM.Compiler.Light" Version="2.0.0" />
     </ItemGroup>
     <ItemGroup>
+      <Compile Update="Resources\Texts.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Texts.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+    <ItemGroup>
       <EmbeddedResource Update="Resources\Texts.resx">
         <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>Texts.Designer.cs</LastGenOutput>
       </EmbeddedResource>
     </ItemGroup>
 </Project>
