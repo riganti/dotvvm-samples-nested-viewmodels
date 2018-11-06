@@ -14,7 +14,10 @@ namespace DotVVM.Samples.NestedViewModel.ViewModels.Projects
             _projectService = projectService;
         }
 
-        public GridViewDataSet<Project> Projects { get; set; }
+        public GridViewDataSet<Project> Projects { get; set; } = new GridViewDataSet<Project>()
+        {
+            PagingOptions = {PageSize = DefaultPageSize }
+        };
 
         public override Task Init()
         {

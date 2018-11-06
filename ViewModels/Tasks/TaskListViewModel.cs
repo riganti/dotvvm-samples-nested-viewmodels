@@ -13,7 +13,10 @@ namespace DotVVM.Samples.NestedViewModel.ViewModels.Tasks
             _taskService = taskService;
         }
 
-        public GridViewDataSet<Task> Tasks { get; set; }
+        public GridViewDataSet<Task> Tasks { get; set; } = new GridViewDataSet<Task>()
+        {
+            PagingOptions = { PageSize = DefaultPageSize }
+        };
 
         public override System.Threading.Tasks.Task Init()
         {
