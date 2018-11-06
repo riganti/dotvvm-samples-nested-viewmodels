@@ -2,6 +2,7 @@
     <PropertyGroup>
         <TargetFramework>netcoreapp2.0</TargetFramework>
         <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+        <LangVersion>latest</LangVersion>
     </PropertyGroup>
     <ItemGroup>
       <Content Include="**/*.dothtml;**/*.dotmaster;**/*.dotcontrol" Exclude="obj/**/*.*;bin/**/*.*" CopyToPublishDirectory="Always" />
