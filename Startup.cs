@@ -41,9 +41,6 @@ namespace DotVVM.Samples.NestedViewModel
                     .AddClasses(classes => classes.AssignableTo<IDotvvmViewModel>())
                         .AsSelf()
                         .WithTransientLifetime()
-                    .AddClasses(classes => classes.AssignableTo<IDotvvmPresenter>())
-                        .AsSelf()
-                        .WithTransientLifetime()
                     .AddClasses(classes => classes.AssignableTo<ServiceBase>())
                         .AsSelf()
                         .WithTransientLifetime());
