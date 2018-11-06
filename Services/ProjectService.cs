@@ -20,5 +20,11 @@ namespace DotVVM.Samples.NestedViewModel.Services
         {
             return FakeDatabase.Projects.FirstOrDefault(p => p.Id == id);
         }
+
+        public void Save(Project project)
+        {
+            var oldValue = FakeDatabase.Projects.First(p=>p.Id == project.Id);
+            FakeDatabase.Projects = FakeDatabase.Projects.Select(x => x.Equals(oldValue) ? project : x);
+        }
     }
 }
