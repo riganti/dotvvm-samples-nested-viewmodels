@@ -1,6 +1,5 @@
 ﻿using DotVVM.Framework.Configuration;
 using DotVVM.Framework.ResourceManagement;
-using DotVVM.Framework.Routing;
 using DotVVM.Framework.Runtime.Tracing;
 using DotVVM.Tracing.MiniProfiler.AspNetCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -20,11 +19,7 @@ namespace DotVVM.Samples.NestedViewModel
         public static IDotvvmServiceCollection AddMiniProfilerEventTracing(IDotvvmServiceCollection services)
         {
             services.Services.AddTransient<IRequestTracer, MiniProfilerTracer>();
-
-            services.Services.Configure((MiniProfilerOptions opt) =>
-            {
-                opt.IgnoredPaths.Add("/dotvvmResource/");
-            });
+            services.Services.Configure((MiniProfilerOptions opt) => opt.IgnoredPaths.Add("/dotvvmResource/"));
 
             services.Services.Configure((DotvvmConfiguration conf) =>
             {
@@ -32,7 +27,6 @@ namespace DotVVM.Samples.NestedViewModel
                 conf.Runtime.GlobalFilters.Add(
                     new MiniProfilerActionFilter(conf.ServiceProvider.GetService<IOptions<MiniProfilerOptions>>()));
             });
-
             return services;
         }
 
@@ -46,10 +40,12 @@ namespace DotVVM.Samples.NestedViewModel
 
         private void ConfigureRoutes(DotvvmConfiguration config, string applicationPath)
         {
-            config.RouteTable.Add("Default", "", "Views/default.dothtml");
-            config.RouteTable.Add("CRUD_Detail", "detail/{Id}", "Views/CRUD/Detail.dothtml");
-            config.RouteTable.Add("CRUD_Edit", "edit/{Id}", "Views/CRUD/Edit.dothtml");
-            config.RouteTable.AutoDiscoverRoutes(new DefaultRouteStrategy(config));
+            config.RouteTable.Add("Default", string.Empty, "Views/default.dothtml");
+
+            config.RouteTable.Add("TaskDetail", "task/{Id}", "Views/Task/TaskDetail.dothtml");
+            config.RouteTable.Add("TaskList", "tasks", "Views/Task/TaskList.dothtml");
+            config.RouteTable.Add("ProjectDetail", "project/{Id}", "Views/Project/ProjectDetail.dothtml");
+            config.RouteTable.Add("ProjectList", "projects", "Views/Project/ProjectList.dothtml");
         }
 
         private void ConfigureControls(DotvvmConfiguration config, string applicationPath)
