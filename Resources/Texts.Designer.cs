@@ -61,6 +61,15 @@ namespace DotVVM.Samples.NestedViewModel.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Assign manager.
+        /// </summary>
+        public static string Label_AssignManager {
+            get {
+                return ResourceManager.GetString("Label_AssignManager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Change Manager.
         /// </summary>
         public static string Label_ChangeManager {
@@ -120,6 +129,15 @@ namespace DotVVM.Samples.NestedViewModel.Resources {
         public static string Label_Manager {
             get {
                 return ResourceManager.GetString("Label_Manager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        public static string Label_Name {
+            get {
+                return ResourceManager.GetString("Label_Name", resourceCulture);
             }
         }
         
