@@ -32,8 +32,8 @@ namespace DotVVM.Samples.NestedViewModel.DAL
                 .Generate(20);
         }
 
-        public IEnumerable<Project> Projects { get; }
-        public IEnumerable<Task> Tasks { get; }
-        public IEnumerable<User> Users { get; }
+        public IEnumerable<Project> Projects { get; set; }
+        public IEnumerable<Task> Tasks { get; set; }
+        public IEnumerable<User> Users { get; set; }
     }
 }
