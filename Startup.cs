@@ -1,5 +1,4 @@
-﻿using DotVVM.Framework.Hosting;
-using DotVVM.Framework.ViewModel;
+﻿using DotVVM.Framework.ViewModel;
 using DotVVM.Samples.NestedViewModel.DAL;
 using DotVVM.Samples.NestedViewModel.Services;
 using Microsoft.AspNetCore.Builder;
@@ -35,15 +34,15 @@ namespace DotVVM.Samples.NestedViewModel
             services.AddSingleton<FakeDatabase>();
             services.AddMiniProfiler(options => options.RouteBasePath = "/profiler");
             services.AddDotVVM<DotvvmStartup>();
-
+            services.AddMemoryCache();
             services.Scan(scan => scan
-                    .FromEntryAssembly()
-                    .AddClasses(classes => classes.AssignableTo<IDotvvmViewModel>())
-                        .AsSelf()
-                        .WithTransientLifetime()
-                    .AddClasses(classes => classes.AssignableTo<ServiceBase>())
-                        .AsSelf()
-                        .WithTransientLifetime());
+                .FromEntryAssembly()
+                .AddClasses(classes => classes.AssignableTo<IDotvvmViewModel>())
+                .AsSelf()
+                .WithTransientLifetime()
+                .AddClasses(classes => classes.AssignableTo<ServiceBase>())
+                .AsSelf()
+                .WithTransientLifetime());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
