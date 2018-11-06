@@ -162,4 +162,10 @@
   <data name="Label_Manager" xml:space="preserve">
     <value>Manager</value>
   </data>
+  <data name="Label_Resolver" xml:space="preserve">
+    <value>Resolver</value>
+  </data>
+  <data name="Label_ChangeManager" xml:space="preserve">
+    <value>Change Manager</value>
+  </data>
 </root>

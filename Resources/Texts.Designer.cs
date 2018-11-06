@@ -61,6 +61,15 @@ namespace DotVVM.Samples.NestedViewModel.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Change Manager.
+        /// </summary>
+        public static string Label_ChangeManager {
+            get {
+                return ResourceManager.GetString("Label_ChangeManager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Delete.
         /// </summary>
         public static string Label_Delete {
@@ -129,6 +138,15 @@ namespace DotVVM.Samples.NestedViewModel.Resources {
         public static string Label_Projects {
             get {
                 return ResourceManager.GetString("Label_Projects", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Resolver.
+        /// </summary>
+        public static string Label_Resolver {
+            get {
+                return ResourceManager.GetString("Label_Resolver", resourceCulture);
             }
         }
         
