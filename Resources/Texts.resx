@@ -117,12 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Label_About" xml:space="preserve">
-    <value>About</value>
-  </data>
-  <data name="Label_Add" xml:space="preserve">
-    <value>Add</value>
-  </data>
   <data name="Label_Delete" xml:space="preserve">
     <value>Delete</value>
   </data>
@@ -132,17 +126,14 @@
   <data name="Label_Edit" xml:space="preserve">
     <value>Edit</value>
   </data>
-  <data name="Label_EnrollmentDate" xml:space="preserve">
-    <value>Enrollment date</value>
-  </data>
   <data name="Label_Firstname" xml:space="preserve">
     <value>First name</value>
   </data>
   <data name="Label_Lastname" xml:space="preserve">
     <value>Last name</value>
   </data>
-  <data name="Label_NewStudent" xml:space="preserve">
-    <value>New item</value>
+  <data name="Label_Projects" xml:space="preserve">
+    <value>Projects</value>
   </data>
   <data name="Label_Save" xml:space="preserve">
     <value>Save</value>
@@ -158,5 +149,17 @@
   </data>
   <data name="Title_StudentList" xml:space="preserve">
     <value>Student list</value>
+  </data>
+  <data name="Label_Tasks" xml:space="preserve">
+    <value>Tasks</value>
+  </data>
+  <data name="Label_Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="Label_Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Label_Manager" xml:space="preserve">
+    <value>Manager</value>
   </data>
 </root>

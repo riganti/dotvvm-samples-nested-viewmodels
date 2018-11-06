@@ -1,0 +1,9 @@
+﻿@viewModel DotVVM.Samples.NestedViewModel.ViewModels.Task.TaskDetailViewModel, DotVVM.Samples.NestedViewModel
+@masterPage Views/MasterPage.dotmaster
+@import DotVVM.Samples.NestedViewModel.Resources
+
+<dot:Content ContentPlaceHolderID="MainContent">
+
+
+</dot:Content>
+
