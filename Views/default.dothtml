@@ -6,11 +6,10 @@
     
     <div class="page-center">
         <div class="page-grid-top">
-        <div class="student-image"></div>
-            <h1>{{resource: Texts.Title_StudentList}}</h1>
-            
-                <dot:RouteLink Text="{resource: Texts.Label_Projects}" RouteName="ProjectList" class="page-button btn-add btn-long"/>
-                <dot:RouteLink Text="{resource: Texts.Label_Tasks}" RouteName="TaskList" class="page-button btn-add btn-long"/>
+            <dot:RouteLink Text="{resource: Texts.Label_Projects}" RouteName="ProjectList" />
+
+            <dot:RouteLink Text="{resource: Texts.Label_Tasks}" RouteName="TaskList" />
+         
         </div>
     </div>
 </dot:Content>
