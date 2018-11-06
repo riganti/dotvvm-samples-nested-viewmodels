@@ -70,15 +70,6 @@ namespace DotVVM.Samples.NestedViewModel.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Delete.
-        /// </summary>
-        public static string Label_Delete {
-            get {
-                return ResourceManager.GetString("Label_Delete", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Description.
         /// </summary>
         public static string Label_Description {
@@ -178,15 +169,6 @@ namespace DotVVM.Samples.NestedViewModel.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Create.
-        /// </summary>
-        public static string Title_Create {
-            get {
-                return ResourceManager.GetString("Title_Create", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Detail.
         /// </summary>
         public static string Title_Detail {
@@ -205,11 +187,20 @@ namespace DotVVM.Samples.NestedViewModel.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Student list.
+        ///   Looks up a localized string similar to Projects collection.
         /// </summary>
-        public static string Title_StudentList {
+        public static string Title_Projects {
             get {
-                return ResourceManager.GetString("Title_StudentList", resourceCulture);
+                return ResourceManager.GetString("Title_Projects", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tasks collection.
+        /// </summary>
+        public static string Title_Tasks {
+            get {
+                return ResourceManager.GetString("Title_Tasks", resourceCulture);
             }
         }
     }
