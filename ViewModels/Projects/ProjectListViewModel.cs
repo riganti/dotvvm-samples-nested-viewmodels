@@ -21,7 +21,10 @@ namespace DotVVM.Samples.NestedViewModel.ViewModels.Projects
 
         public override Task Init()
         {
-            _projectService.LoadUsersDataSet(Projects);
+            if (Projects.IsRefreshRequired)
+            {
+                _projectService.LoadUsersDataSet(Projects);
+            }
 
             return base.Init();
         }
