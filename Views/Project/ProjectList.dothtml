@@ -3,6 +3,7 @@
 @import DotVVM.Samples.NestedViewModel.Resources
 
 <dot:Content ContentPlaceHolderID="MainContent">
+    <h1 InnerText="{resource: Texts.Title_Projects}" />
     <dot:GridView DataSource="{value: Projects}" class="page-grid">
         <Columns>
             <dot:GridViewTextColumn ValueBinding="{value: Title}" HeaderText="{resource: Texts.Label_Title}" />
@@ -14,10 +15,10 @@
             </dot:GridViewTemplateColumn>
 
             <dot:GridViewTemplateColumn>
-                <dot:Button Click="{command: _parent.ChangeManager(_this)}" Text="{resource: Texts.Label_ChangeManager}"/>
+                <dot:Button Click="{command: _parent.ChangeManager(_this)}" Text="{resource: Texts.Label_ChangeManager}" />
             </dot:GridViewTemplateColumn>
         </Columns>
     </dot:GridView>
-
+    <dot:DataPager DataSet="{value: Projects}" class="pager"/>
 </dot:Content>
 
