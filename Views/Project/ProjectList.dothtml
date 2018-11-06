@@ -1,4 +1,4 @@
-﻿@viewModel DotVVM.Samples.NestedViewModel.ViewModels.Project.ProjectListViewModel, DotVVM.Samples.NestedViewModel
+﻿@viewModel DotVVM.Samples.NestedViewModel.ViewModels.Projects.ProjectListViewModel, DotVVM.Samples.NestedViewModel
 @masterPage Views/MasterPage.dotmaster
 @import DotVVM.Samples.NestedViewModel.Resources
 
@@ -14,7 +14,7 @@
             </dot:GridViewTemplateColumn>
 
             <dot:GridViewTemplateColumn>
-                <dot:Button Click="{command: ChangeManager(_this)}"></dot:Button>
+                <dot:Button Click="{command: _parent.ChangeManager(_this)}" Text="{resource: Texts.Label_ChangeManager}"/>
             </dot:GridViewTemplateColumn>
         </Columns>
     </dot:GridView>

@@ -1,9 +1,14 @@
-﻿@viewModel DotVVM.Samples.NestedViewModel.ViewModels.Task.TaskDetailViewModel, DotVVM.Samples.NestedViewModel
+﻿@viewModel DotVVM.Samples.NestedViewModel.ViewModels.Tasks.TaskDetailViewModel, DotVVM.Samples.NestedViewModel
 @masterPage Views/MasterPage.dotmaster
 @import DotVVM.Samples.NestedViewModel.Resources
 
 <dot:Content ContentPlaceHolderID="MainContent">
-
+    <div DataContext="{value: Task}">
+        <h1 InnerText="{value: Title}" />
+        <small InnerText="{value: Manager.FullName}" />
+        <small InnerText="{value: Resolver.FullName}" />
+        <p InnerText="{value: Description}" />
+    </div>
 
 </dot:Content>
 

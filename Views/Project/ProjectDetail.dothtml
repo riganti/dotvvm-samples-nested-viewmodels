@@ -1,9 +1,14 @@
-﻿@viewModel DotVVM.Samples.NestedViewModel.ViewModels.Project.ProjectDetailViewModel, DotVVM.Samples.NestedViewModel
+﻿@viewModel DotVVM.Samples.NestedViewModel.ViewModels.Projects.ProjectDetailViewModel, DotVVM.Samples.NestedViewModel
 @masterPage Views/MasterPage.dotmaster
 @import DotVVM.Samples.NestedViewModel.Resources
 
 <dot:Content ContentPlaceHolderID="MainContent">
 
+    <div DataContext="{value: Project}">
+        <h1 InnerText="{value: Title}" />
+        <small InnerText="{value: Manager.FullName}" />
+        <p InnerText="{value: Description}" />
+    </div>
 
 </dot:Content>
 
